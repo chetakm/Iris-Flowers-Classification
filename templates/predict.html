@@ -1,0 +1,39 @@
+{% block body %}
+
+<div style="background-color: #F5F5DC; padding: 20px; text-align: center;">
+  <h1 style="color: #008080;">Prediction Output</h1>
+
+  <div>
+    {% if prediction==0 %}
+      <h1 style="color: #008000;">It is a Setosa</h1>
+    {% endif %}
+  </div>
+
+  <div>
+    {% if prediction==1 %}
+      <h1 style="color: #FFA500;">It is a Versicolor</h1>
+    {% endif %}
+  </div>
+
+  <div>
+    {% if prediction==2 %}
+      <h1 style="color: #FF1493;">It is a Verginica</h1>
+    {% endif %}
+  </div>
+</div>
+
+<style>
+  @media only screen and (max-width: 767px) {
+    h1 {
+      font-size: 1.5em;
+    }
+  }
+
+  @media only screen and (min-width: 768px) {
+    h1 {
+      font-size: 3em;
+    }
+  }
+</style>
+
+{% endblock %}
